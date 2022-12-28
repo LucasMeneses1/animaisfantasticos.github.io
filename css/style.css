@@ -1,0 +1,11 @@
+@import url("./global.css");
+@import url("./grid.css");
+@import url("./menu.css");
+@import url("./animais.css");
+@import url("./faq.css");
+@import url("./contato.css");
+@import url("./rodape.css");
+
+.borda {
+  border: 1px solid red;
+}

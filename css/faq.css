@@ -1,0 +1,61 @@
+.faq h1 {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.faq dt {
+  font: 700 0.875rem/1 "IBM Plex Mono", monospace;
+  margin-bottom: 8px;
+  margin-top: 32px;
+  color: #e54;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq dt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background: #feb85c;
+  margin-right: 8px;
+}
+
+.faq dd {
+  font: 400 1rem/1.2 Helvetica, Arial;
+  margin-bottom: 32px;
+  padding-left: 28px;
+}
+
+.js .js-accordeon-list dt::after {
+  content: "▼";
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.js .js-accordeon-list dt.ativo::after {
+  transform: rotate(180deg);
+}
+
+.js .js-accordeon-list dd {
+  display: none;
+}
+
+.js .js-accordeon-list .exibir {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}

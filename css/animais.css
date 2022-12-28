@@ -1,0 +1,99 @@
+.animais {
+  margin-bottom: 96px;
+}
+
+.animais h1 {
+  margin-bottom: 16px;
+}
+
+.animais-imagens::-webkit-scrollbar {
+  width: 18px;
+}
+
+.animais-imagens::-webkit-scrollbar-thumb {
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.animais-imagens::-webkit-scrollbar-track {
+  background: #faf6ed;
+}
+/* 
+.artigo {
+  margin-top: 40px;
+} */
+
+.animais h3 {
+  font: 400 0.875rem/1 "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  color: #e54;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.animais h3::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 10px;
+  background: #feb85c;
+  margin-right: 8px;
+}
+
+.animais p {
+  font: 400 1rem/1.2 Helvetica, Arial;
+  margin-bottom: 16px;
+}
+
+.animais ul {
+  grid-column: 2;
+  max-height: 376px;
+  overflow-y: scroll;
+}
+
+.animais article {
+  grid-column: 3/4;
+}
+
+@media (max-width: 700px) {
+  .animais ul {
+    grid-column: 1;
+    height: 400px;
+  }
+
+  .animais img {
+    height: 109px;
+  }
+  .animais article {
+    grid-column: 2;
+  }
+}
+
+.js .animais .artigo {
+  display: none;
+}
+
+.js .animais img:hover {
+  cursor: pointer;
+}
+
+.js .animais .ativo {
+  display: block;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

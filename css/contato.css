@@ -1,0 +1,37 @@
+.contato {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contato h1 {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.contato div {
+  grid-column: 2;
+}
+
+.contato li {
+  font: 400 1rem/1.2 Helvetica, Arial;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contato li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  background: #feb85c;
+  margin-right: 8px;
+}
+
+@media (max-width: 700px) {
+  .contato div,
+  .contato ul {
+    grid-column: 1/-1;
+  }
+}
