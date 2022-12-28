@@ -19,7 +19,7 @@
 
 <body>
   <div class="container">
-    <header class="menu js-menu">
+    <header class="menu" data-menu='smooth'>
       <nav>
         <ul>
           <li><a href="#animais">Animais</a></li>
@@ -30,9 +30,9 @@
       </nav>
     </header>
 
-    <section class="js-animacao-scroll animais container-conteudo" id="animais" aria-label="Animais Fantásticos">
+    <section class="animais container-conteudo" id="animais" aria-label="Animais Fantásticos" data-anime='scroll'>
       <h1>Animais Fantásticos</h1>
-      <ul class="animais-imagens js-tab">
+      <ul class="animais-imagens" data-tab="menu">
         <li><img src="./img/imagem1.jpg" alt="Raposa" width="282" height="376"></li>
         <li><img src="./img/imagem2.jpg" alt="Esquilo" width="282" height="376"></li>
         <li><img src="./img/imagem3.jpg" alt="Urso" width="282" height="376"></li>
@@ -40,43 +40,43 @@
         <li><img src="./img/imagem5.jpg" alt="Macaco" width="282" height="376"></li>
         <li><img src="./img/imagem6.jpg" alt="Leão" width="282" height="376"></li>
       </ul>
-      <article class="conteudo js-tab-conteudo">
-        <div class="artigo">
+      <article class="conteudo" data-tab="conteudo">
+        <div data-anime="show-right" class="artigo">
           <h3>Raposa</h3>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
         </div>
-        <div class="artigo">
+        <div data-anime="show-right" class="artigo">
           <h3>Esquilo</h3>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
         </div>
-        <div class="artigo">
+        <div data-anime="show-down" class="artigo">
           <h3>Urso</h3>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
         </div>
-        <div class="artigo">
+        <div data-anime="show-down" class="artigo">
           <h3>Lobo</h3>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
         </div>
-        <div class="artigo">
+        <div data-anime="show-right" class="artigo">
           <h3>Macaco</h3>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
           <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
         </div>
-        <div class="artigo">
+        <div data-anime="show-right" class="artigo">
           <h3>Leão</h3>
           <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
           <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
@@ -86,9 +86,9 @@
       </article>
     </section>
 
-    <section class="js-animacao-scroll faq container-conteudo" id="faq" aria-label="Perguntas Frequentes">
+    <section class="faq container-conteudo" id="faq" aria-label="Perguntas Frequentes" data-anime='scroll'>
       <h1>Faq</h1>
-      <dl class="conteudo js-accordeon-list">
+      <dl class="conteudo" data-anime='accordeon'>
         <dt>Qual a idade dos animais?</dt>
         <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
         <dt>Eles são fantásticos?</dt>
@@ -100,7 +100,7 @@
       </dl>
     </section>
 
-    <section class="js-animacao-scroll contato container-conteudo" id="contato" aria-label="Contato">
+    <section class="contato container-conteudo" id="contato" aria-label="Contato" data-anime='scroll'>
       <h1 class="">Contato</h1>
       <div class="">
         <img src="./img/mapa.png" alt="" width="1200" height="1600">
@@ -118,7 +118,7 @@
     </footer>
   </div>
 
-  <script src="./script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
