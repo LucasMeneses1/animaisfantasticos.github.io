@@ -23,9 +23,18 @@
       <nav>
         <ul>
           <li><a href="#animais">Animais</a></li>
+          <li data-dropdown>
+            <a href="sobre.html">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">A Empresa</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="socios.html">Sócios</a></li>
+              <li><a href="investidores.html">Investidores</a></li>
+            </ul>
+          </li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="">Dev</a></li>
+          <li><a data-modal="abrir" href="./login.html">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -103,7 +112,7 @@
     <section class="contato container-conteudo" id="contato" aria-label="Contato" data-anime='scroll'>
       <h1 class="">Contato</h1>
       <div class="">
-        <img src="./img/mapa.png" alt="" width="1200" height="1600">
+        <img src="./img/mapa.png" alt="" width="1200" height="1600" data-tooltip aria-label="Endereço próximo ao estacionamento">
       </div>
       <ul class="">
         <li><a href="mailto: contato@lucasmeneses.com"></a> contato@lucasmeneses.com</li>
@@ -118,6 +127,18 @@
     </footer>
   </div>
 
+  <section class="modal-container" data-modal="container">
+    <div class="modal">
+      <button data-modal="fechar" class="fechar">x</button>
+      <form action="">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+        <button type="submit" class="">Entrar</button>
+      </form>
+    </div>
+  </section>
   <script type="module" src="js/script.js"></script>
 </body>
 

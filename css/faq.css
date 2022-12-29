@@ -39,11 +39,11 @@
   transform: rotate(180deg);
 }
 
-.js .js-accordeon-list dd {
+.js [data-anime="accordeon"] dd {
   display: none;
 }
 
-.js .js-accordeon-list .exibir {
+.js [data-anime="accordeon"] .exibir {
   display: block;
   animation: slideDown 0.5s forwards;
 }
