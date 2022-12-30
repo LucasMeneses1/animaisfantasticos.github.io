@@ -6,8 +6,12 @@ export default function initAnimacaoScroll() {
     function animacaoScroll() {
       sections.forEach((e) => {
         if (e.getBoundingClientRect().top - alturaJanela * 0.6 < 0) {
-          e.classList.add("ativo");
-        } else e.classList.remove("ativo");
+          if (!e.classList.contains("ativo")) {
+            e.classList.add("ativo");
+          }
+        } else if (e.classList.contains("ativo")) {
+          e.classList.remove("ativo");
+        }
       });
     }
 

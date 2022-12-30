@@ -8,6 +8,7 @@
 @import url("./modal.css");
 @import url("./tooltips.css");
 @import url("./dropdownmenu.css");
+@import url("./numeros.css");
 
 .borda {
   border: 1px solid red;

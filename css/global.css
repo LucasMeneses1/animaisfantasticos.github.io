@@ -40,16 +40,12 @@ li {
   transform: translate3d(0, 0, 0);
 }
 
-.animais h1,
-.faq h1,
-.contato h1 {
+h1 {
   font: 400 6rem/1 "Playfair Display SC";
 }
 
 @media (max-width: 700px) {
-  .animais h1,
-  .faq h1,
-  .contato h1 {
+  h1 {
     font: 400 3rem/1 "Playfair Display SC";
   }
 }
