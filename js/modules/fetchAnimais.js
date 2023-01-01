@@ -1,8 +1,8 @@
 import initAnimacaoNumeros from "./animacao-numeros.js";
 
 export default function initFetchAnimais() {
-  try {
-    async function fetchAnimais(url) {
+  async function fetchAnimais(url) {
+    try {
       const animaisResponse = await fetch(url);
       const animaisJSON = await animaisResponse.json();
       const numeros = document.querySelector(".numeros ul");
@@ -11,9 +11,9 @@ export default function initFetchAnimais() {
         numeros.appendChild(liAnimal);
       });
       initAnimacaoNumeros();
+    } catch (erro) {
+      console.log(erro);
     }
-  } catch (erro) {
-    console.log(erro);
   }
 
   function criarAnimal(animal) {
