@@ -1,6 +1,5 @@
 import ScrollSuave from "./modules/scroll-suave.js";
-import initAnimacaoScroll from "./modules/animacao-scroll.js";
-import initAccordeonList from "./modules/accordeon-list.js";
+import AccordeonList from "./modules/accordeon-list.js";
 import initNavTabs from "./modules/tab-nav.js";
 import initModal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
@@ -9,12 +8,14 @@ import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
+import initAnimacaoScroll from "./modules/animacao-scroll.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="smooth"] a[href^="#"]');
 scrollSuave.init();
 
-initAnimacaoScroll();
-initAccordeonList();
+const accordeonList = new AccordeonList("[data-anime='accordeon'] dt");
+accordeonList.init();
+
 initNavTabs();
 initModal();
 initTooltip();
@@ -23,3 +24,4 @@ initMenuMobile();
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
+initAnimacaoScroll();
