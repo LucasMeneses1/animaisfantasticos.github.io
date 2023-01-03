@@ -1,4 +1,4 @@
-import initScrollSuave from "./modules/scroll-suave.js";
+import ScrollSuave from "./modules/scroll-suave.js";
 import initAnimacaoScroll from "./modules/animacao-scroll.js";
 import initAccordeonList from "./modules/accordeon-list.js";
 import initNavTabs from "./modules/tab-nav.js";
@@ -10,7 +10,9 @@ import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
-initScrollSuave();
+const scrollSuave = new ScrollSuave('[data-menu="smooth"] a[href^="#"]');
+scrollSuave.init();
+
 initAnimacaoScroll();
 initAccordeonList();
 initNavTabs();
