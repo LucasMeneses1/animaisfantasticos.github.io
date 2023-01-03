@@ -1,7 +1,7 @@
 import ScrollSuave from "./modules/scroll-suave.js";
 import AccordeonList from "./modules/accordeon-list.js";
 import NavTab from "./modules/tab-nav.js";
-import initModal from "./modules/modal.js";
+import Modal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
@@ -18,11 +18,17 @@ accordeonList.init();
 
 const tabNav = new NavTab(
   "[data-tab='menu'] img",
-  "[data-tab='conteudo'] .artigo"
+  "[data-tab='conteudo'] .artigo",
 );
 tabNav.init();
 
-initModal();
+const modal = new Modal(
+  "[data-modal='abrir']",
+  "[data-modal='fechar']",
+  "[data-modal='container']",
+);
+modal.init();
+
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
