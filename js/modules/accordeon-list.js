@@ -28,5 +28,6 @@ export default class AccordeonList {
       // ativando o evento do efeito
       this.addAccordeonEvent();
     }
+    return this;
   }
 }

@@ -23,5 +23,6 @@ export default class NavTabs {
       this.ativaTab(0);
       this.addNavTab();
     }
+    return this;
   }
 }

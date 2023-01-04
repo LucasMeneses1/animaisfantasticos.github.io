@@ -23,5 +23,6 @@ export default class Modal {
       "click",
       this.fecharModalClicandoFora,
     );
+    return this;
   }
 }
