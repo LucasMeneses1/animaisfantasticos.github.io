@@ -28,9 +28,7 @@ export default class AnimacaoNumeros {
 
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerTrigger)) {
-      // para repetir a animação apenas na primeira vez que os numeros aparecerem,
-      // ativar esse método
-      /* this.observer.disconnect(); */
+      this.observer.disconnect();
       this.animacaoNumeros();
     }
   }
@@ -41,7 +39,9 @@ export default class AnimacaoNumeros {
   }
 
   init() {
-    this.addMutationObserver();
+    if (this.numeros.length && this.observerTarget) {
+      this.addMutationObserver();
+    }
     return this;
   }
 }
