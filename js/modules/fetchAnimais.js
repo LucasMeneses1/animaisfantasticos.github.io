@@ -1,4 +1,4 @@
-import initAnimacaoNumeros from "./animacao-numeros.js";
+import AnimacaoNumeros from "./animacao-numeros.js";
 
 export default function initFetchAnimais() {
   function criarAnimal(animal) {
@@ -15,7 +15,8 @@ export default function initFetchAnimais() {
       const liAnimal = criarAnimal(animal);
       numeros.appendChild(liAnimal);
     });
-    initAnimacaoNumeros();
+    const animaNumeros = new AnimacaoNumeros("[data-numero]", ".numeros", "ativo");
+    animaNumeros.init();
   }
   try {
     fetchAnimais("./js/animaisApi.json");
