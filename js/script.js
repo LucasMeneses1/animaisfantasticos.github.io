@@ -3,7 +3,7 @@ import AccordeonList from "./modules/accordeon-list.js";
 import NavTab from "./modules/tab-nav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initDropdownMenu from "./modules/dropdown-menu.js";
+import DropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
@@ -35,7 +35,9 @@ tooltip.init();
 const animacaoScroll = new AnimacaoScroll("section[data-anime='scroll']");
 animacaoScroll.init();
 
-initDropdownMenu();
+const dropdownMenu = new DropdownMenu("[data-dropdown]");
+dropdownMenu.init();
+
 initMenuMobile();
 initFuncionamento();
 initFetchAnimais();
