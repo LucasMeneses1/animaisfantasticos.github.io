@@ -4,7 +4,7 @@ import NavTab from "./modules/tab-nav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
@@ -19,6 +19,7 @@ accordeonList.init();
 const tabNav = new NavTab(
   "[data-tab='menu'] img",
   "[data-tab='conteudo'] .artigo",
+  "ativo",
 );
 tabNav.init();
 
@@ -35,10 +36,12 @@ tooltip.init();
 const animacaoScroll = new AnimacaoScroll("section[data-anime='scroll']");
 animacaoScroll.init();
 
-const dropdownMenu = new DropdownMenu("[data-dropdown]");
+const dropdownMenu = new DropdownMenu("[data-dropdown]", ["touchstart", "click"], "ativo");
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile("[data-menu='button']", '[data-menu="list"]', ["touchstart", "click"], "ativo");
+menuMobile.init();
+
 initFuncionamento();
 initFetchAnimais();
 initFetchBitcoin();
