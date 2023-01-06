@@ -1,21 +1,41 @@
-export default function initAnimacaoScroll() {
-  const sections = document.querySelectorAll("section[data-anime='scroll']");
-  const alturaJanela = window.innerHeight;
+import debounce from './debounce.js';
 
-  if (sections.length) {
-    function animacaoScroll() {
-      sections.forEach((e) => {
-        if (e.getBoundingClientRect().top - alturaJanela * 0.6 < 0) {
-          if (!e.classList.contains("ativo")) {
-            e.classList.add("ativo");
-          }
-        } else if (e.classList.contains("ativo")) {
-          e.classList.remove("ativo");
-        }
-      });
+export default class AnimacaoScroll {
+  constructor(sections) {
+    this.sections = document.querySelectorAll(sections);
+    this.alturaJanela = window.innerHeight;
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
+  }
+
+  getDistance() {
+    this.distance = [...this.sections].map((section) => {
+      const offset = section.offsetTop;
+      return {
+        element: section,
+        offset: Math.floor(offset - this.alturaJanela * 0.6),
+      };
+    });
+  }
+
+  checkDistance() {
+    console.log('teste');
+    this.distance.forEach((section) => {
+      if (window.pageYOffset > section.offset) {
+        section.element.classList.add("ativo");
+      } else section.element.classList.remove("ativo");
+    });
+  }
+
+  init() {
+    if (this.sections.length) {
+      this.getDistance();
+      this.checkDistance();
+      window.addEventListener("scroll", this.checkDistance);
     }
+    return this;
+  }
 
-    window.addEventListener("scroll", animacaoScroll);
-    animacaoScroll();
+  stop() {
+    window.removeEventListener("scroll", this.checkDistance);
   }
 }
