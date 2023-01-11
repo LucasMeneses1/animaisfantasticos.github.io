@@ -11,7 +11,8 @@
 .animais,
 .faq,
 .contato,
-.numeros {
+.numeros,
+.galeria {
   grid-column: 2/4;
 }
 
@@ -43,7 +44,8 @@
   .animais,
   .faq,
   .contato,
-  .numeros {
+  .numeros,
+  .galeria {
     grid-column: 1;
   }
 

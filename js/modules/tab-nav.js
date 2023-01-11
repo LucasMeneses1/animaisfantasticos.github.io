@@ -1,25 +1,29 @@
-export default function initNavTabs() {
-  const animaisImgs = document.querySelectorAll("[data-tab='menu'] img");
-  const animaisArtigos = document.querySelectorAll(
-    "[data-tab='conteudo'] .artigo"
-  );
+export default class NavTabs {
+  constructor(imgs, artigos, classe) {
+    this.imgs = document.querySelectorAll(imgs);
+    this.artigos = document.querySelectorAll(artigos);
+    this.classe = classe;
+  }
 
-  animaisArtigos[0].classList.add("ativo");
-
-  if (animaisImgs.length && animaisArtigos.length) {
-    function tabAtiva(index) {
-      animaisArtigos.forEach((element) => {
-        element.classList.remove("ativo");
-      });
-      const direcaoAnimacao = animaisArtigos[index].dataset.anime;
-      animaisArtigos[index].classList.add("ativo", direcaoAnimacao);
-      console.log(animaisArtigos[index]);
-    }
-
-    animaisImgs.forEach((element, index) => {
-      element.addEventListener("click", () => {
-        tabAtiva(index);
-      });
+  ativaTab(index) {
+    this.artigos.forEach((element) => {
+      element.classList.remove(this.classe);
     });
+    const animacao = this.artigos[index].dataset.anime;
+    this.artigos[index].classList.add(this.classe, animacao);
+  }
+
+  addNavTab() {
+    this.imgs.forEach((element, index) => {
+      element.addEventListener("click", () => this.ativaTab(index));
+    });
+  }
+
+  init() {
+    if (this.imgs.length && this.artigos.length) {
+      this.ativaTab(0);
+      this.addNavTab();
+    }
+    return this;
   }
 }

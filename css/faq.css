@@ -29,14 +29,19 @@
   padding-left: 28px;
 }
 
-.js .js-accordeon-list dt::after {
-  content: "▼";
+.js [data-anime='accordeon'] dt::after {
+  content: "";
   display: inline-block;
-  margin-left: 8px;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  background: url('../img/arrow-red.svg') no-repeat center center;
+  transform: rotate(90deg);
+  transition: transform .3s;
 }
 
-.js .js-accordeon-list dt.ativo::after {
-  transform: rotate(180deg);
+.js [data-anime='accordeon'] dt.ativo::after {
+  transform: rotate(-90deg);
 }
 
 .js [data-anime="accordeon"] dd {

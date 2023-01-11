@@ -1,18 +1,22 @@
-export default function initFuncionamento() {}
+export default class Funcionamento {
+  constructor(funcionamento, classe) {
+    this.funcionamento = document.querySelector(funcionamento);
+    this.diasFuncionamento = this.funcionamento.dataset.semana.split(",").map(Number);
+    this.horarioFuncionamento = this.funcionamento.dataset.horario
+      .split(",")
+      .map(Number);
+    this.diaAtual = new Date().getDay();
+    this.horaAtual = new Date().getUTCHours() - 3;
+    this.classe = classe;
+  }
 
-const funcionamento = document.querySelector("[data-semana]");
-const diasFuncionamento = funcionamento.dataset.semana.split(",").map(Number);
-const horarioFuncionamento = funcionamento.dataset.horario
-  .split(",")
-  .map(Number);
-
-const diaAtual = new Date().getDay();
-const horaAtual = new Date().getHours();
-
-if (
-  diasFuncionamento.indexOf(diaAtual) !== -1 &&
-  horaAtual >= horarioFuncionamento[0] &&
-  horaAtual <= horarioFuncionamento[1]
-) {
-  funcionamento.classList.add("aberto");
+  init() {
+    if (
+      this.diasFuncionamento.indexOf(this.diaAtual) !== -1
+      && this.horaAtual >= this.horarioFuncionamento[0]
+      && this.horaAtual <= this.horarioFuncionamento[1]
+    ) {
+      this.funcionamento.classList.add(this.classe);
+    }
+  }
 }

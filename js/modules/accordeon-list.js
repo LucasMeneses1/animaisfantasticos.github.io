@@ -1,18 +1,33 @@
-export default function initAccordeonList() {
-  const perguntas = document.querySelectorAll("[data-anime='accordeon'] dt");
-  const respostas = document.querySelectorAll("[data-anime='accordeon'] dd");
-
-  respostas[0].classList.add("exibir");
-  perguntas[0].classList.toggle("ativo");
-
-  function exibirResposta(index) {
-    respostas[index].classList.toggle("exibir");
+export default class AccordeonList {
+  constructor(list) {
+    this.accordionList = document.querySelectorAll(list);
+    this.activeClass = "ativo";
+    this.showClass = "exibir";
   }
 
-  perguntas.forEach((element, index) => {
-    element.addEventListener("click", () => {
-      element.classList.toggle("ativo");
-      exibirResposta(index);
+  toggleAcordion(exibir) {
+    exibir.classList.toggle(this.showClass);
+  }
+
+  addAccordeonEvent() {
+    this.accordionList.forEach((element) => {
+      const exibir = element.nextElementSibling;
+      element.addEventListener("click", () => {
+        element.classList.toggle(this.activeClass);
+        this.toggleAcordion(exibir);
+      });
     });
-  });
+  }
+
+  // inicia a função
+  init() {
+    if (this.accordionList.length) {
+      // ativando o primeiro item
+      this.accordionList[0].classList.add(this.activeClass);
+      this.accordionList[0].nextElementSibling.classList.add(this.showClass);
+      // ativando o evento do efeito
+      this.addAccordeonEvent();
+    }
+    return this;
+  }
 }
