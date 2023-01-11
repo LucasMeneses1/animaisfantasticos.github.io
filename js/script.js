@@ -7,6 +7,7 @@ import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
 import Funcionamento from "./modules/funcionamento.js";
 import AnimacaoScroll from "./modules/animacao-scroll.js";
+import SlideNav from './modules/slide.js';
 import initFetchAnimais from "./modules/fetchAnimais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
@@ -47,3 +48,7 @@ funcionamento.init();
 
 initFetchAnimais();
 initFetchBitcoin();
+
+const slide = new SlideNav('.slide-wrapper', '.slide', 'ativo');
+slide.Init();
+slide.addControl('.custom-controls');

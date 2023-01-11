@@ -35,7 +35,7 @@
           </li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a data-modal="abrir" href="./login.html">Login</a></li>
+          <li><a data-modal="abrir" href="./login.html">Login <span class="arrow-black"></span> </a></li>
         </ul>
       </nav>
     </header>
@@ -110,6 +110,27 @@
       </dl>
     </section>
 
+    <section class="galeria container-conteudo" id="galeria" aria-label="Galeria de animais" data-anime='scroll'>
+      <ul class="custom-controls">
+        <li><img src="./img/slide/foto1-thumb.jpg" alt=""></li>
+        <li><img src="./img/slide/foto2-thumb.jpg" alt=""></li>
+        <li><img src="./img/slide/foto3-thumb.jpg" alt=""></li>
+        <li><img src="./img/slide/foto4-thumb.jpg" alt=""></li>
+        <li><img src="./img/slide/foto5-thumb.jpg" alt=""></li>
+        <li><img src="./img/slide/foto6-thumb.jpg" alt=""></li>
+      </ul>
+      <div class="slide-wrapper">
+        <ul class="slide">
+          <li><img src="./img/slide/foto1.jpg" alt=""></li>
+          <li><img src="./img/slide/foto2.jpg" alt=""></li>
+          <li><img src="./img/slide/foto3.jpg" alt=""></li>
+          <li><img src="./img/slide/foto4.jpg" alt=""></li>
+          <li><img src="./img/slide/foto5.jpg" alt=""></li>
+          <li><img src="./img/slide/foto6.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
+
     <section class="numeros container-conteudo" id="numeros" aria-label="Estatística dos animais" data-anime='scroll'>
       <h1>Números</h1>
       <ul class="conteudo">
@@ -138,7 +159,7 @@
 
   <section class="modal-container" data-modal="container">
     <div class="modal">
-      <button data-modal="fechar" class="fechar">x</button>
+      <button data-modal="fechar" class="fechar"></button>
       <form action="">
         <label for="email">Email</label>
         <input type="text" name="email" id="email">
